@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.orangedusk.mytemplate.common.vo.Resource"/>
+        <import type="com.orangedusk.mytemplate.common.vo.Status"/>
+        <variable
+            name="resource"
+            type="Resource" />
+    </data>
+<LinearLayout
+    android:layout_width="wrap_content"
+    visibleGone="@{resource.status ==Status.LOADING}"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="@dimen/card_margin">
+    <ProgressBar
+        style="?android:attr/popupWindowStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+</layout>
