@@ -13,5 +13,5 @@ The features of the template are as follows:
 - The repository connects to the data source (in this case a Rest API) using Retrofit. This can be replaced with a framework of your choice like Volley or even a simple Asynctask and that will not affect the domain and view layers.
 - Since it uses a totally reactive , event-driven model with LiveData, you don't have to pass listeners from the view layer to repository.   
 - A user action triggers an event that inturn triggers a data request. On receiving the data, LiveData objects are updated in the repository that triggers the observers in the Interactor layer
-The interactor classes use a custom Transformation class - AsyncTransformations to convert the LiveData objects of data models received from the Rest API to LiveData of Ui Models needed for the Views.
+-The interactor classes use a custom Transformation class - AsyncTransformations to convert the LiveData objects of data models received from the Rest API to LiveData of Ui Models needed for the Views asynchronously.
 - The views have observers for the LiveData of Uimodels that trigger the Ui updates.
